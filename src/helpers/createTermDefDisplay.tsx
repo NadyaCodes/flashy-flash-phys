@@ -2,7 +2,7 @@ export type termObject = {
   [key: string]: string;
 };
 
-export const createTermDisplay = (
+export const createTermDefDisplay = (
   termObject: termObject,
   termArray: string[],
 ) => {
@@ -10,7 +10,7 @@ export const createTermDisplay = (
     <div>
       {termArray.map((key) => (
         <div key={key} className="">
-          <span className=" font-bold">{key}</span>: {termObject[key]}
+          <span className="font-bold">{key}</span>: {termObject[key]}
         </div>
       ))}
     </div>

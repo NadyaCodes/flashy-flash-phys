@@ -1,7 +1,7 @@
-import { termObject } from "~/helpers/createTermDisplay";
+import { termObject } from "~/helpers/createTermDefDisplay";
 
 export const locationsTerms: termObject = { "sagittal plane": "vertical divide; left/right",
-"median plane": "vertical divide: left/right",
+"median plane": "vertical divide; left/right",
 "parasagittal plane": "parallel to safittal, off to the side",
 "coronal plane": "vertical divide; front/back",
 "frontal plane": "vertical divide; front/back",

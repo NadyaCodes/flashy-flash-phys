@@ -2,15 +2,22 @@
 import { useState } from "react";
 import Link from "next/link";
 import { locationsTerms } from "terms/locations";
-import { createTermDisplay } from "~/helpers/createTermDisplay";
+import { createTermDefDisplay } from "~/helpers/createTermDefDisplay";
 import { shuffleTerms } from "~/helpers/shuffleTerms";
+import MatchMenu from "./matchMenu";
 
 export default function LocationLocationLocation() {
   const [locationsKeys, setLocationsKeys] = useState(
     Object.keys(locationsTerms),
   );
+  const [defsVisible, setDefsVisible] = useState(false);
+
+  const toggleVisibility = () => {
+    setDefsVisible(!defsVisible);
+  };
+
   const setTerms = (locationsKeys: string[]) =>
-    createTermDisplay(locationsTerms, locationsKeys);
+    createTermDefDisplay(locationsTerms, locationsKeys);
   const [allLocationsDisplay, setLocationsDisplay] = useState(
     setTerms(locationsKeys),
   );
@@ -44,7 +51,16 @@ export default function LocationLocationLocation() {
         >
           <h3 className="text-2xl font-bold">Shuffle</h3>
         </button>
-        <div className="">{allLocationsDisplay}</div>
+        <MatchMenu locationsKeys={locationsKeys} />
+        <div>
+          <button
+            onClick={toggleVisibility}
+            className="flex w-fit flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
+          >
+            {defsVisible ? "Hide" : "Show"} Definitions
+          </button>
+          {defsVisible && <div className="">{allLocationsDisplay}</div>}
+        </div>
       </div>
     </main>
   );
