@@ -3,7 +3,8 @@ import { useState } from "react";
 import Link from "next/link";
 import { createTermDefDisplay } from "~/helpers/createTermDefDisplay";
 import { shuffleTerms } from "~/helpers/shuffleTerms";
-import MatchMenu from "./matchMenu";
+import MatchMenu from "./MatchMenu";
+import VocabFlash from "./VocabFlash";
 import { deckObject, emptyDeckObject } from "terms/deckObject";
 import { usePathname } from "next/navigation";
 
@@ -22,9 +23,14 @@ export default function ChapterComponent() {
     Object.keys(localDeckObject?.data),
   );
   const [defsVisible, setDefsVisible] = useState(false);
+  const [matchVisible, setMatchVisible] = useState(false);
 
   const toggleVisibility = () => {
     setDefsVisible(!defsVisible);
+  };
+
+  const toggleMatch = () => {
+    setMatchVisible(!matchVisible);
   };
 
   const setTerms = (chapterKeys: string[]) =>
@@ -62,10 +68,30 @@ export default function ChapterComponent() {
         >
           <h3 className="text-2xl font-bold">Shuffle</h3>
         </button>
-        <MatchMenu
-          localDeckObject={localDeckObject}
-          chapterKeys={chapterKeys}
-        />
+
+        <div className="flex">
+          <div>
+            <button
+              onClick={toggleMatch}
+              className="flex w-fit flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
+            >
+              {matchVisible ? "Hide" : "Show"} Match Game
+            </button>
+            {matchVisible && (
+              <div className="">
+                <MatchMenu
+                  localDeckObject={localDeckObject}
+                  chapterKeys={chapterKeys}
+                />
+              </div>
+            )}
+          </div>
+          <VocabFlash
+            localDeckObject={localDeckObject}
+            chapterKeys={chapterKeys}
+          />
+        </div>
+
         <div>
           <button
             onClick={toggleVisibility}
