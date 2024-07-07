@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import type { termObject } from "./createTermDefDisplay";
+import { TermObject } from "terms/deckObject";
 
 export const createTermMatchDisplay = (
-  termObject: termObject,
+  termObject: TermObject,
   termArray: string[],
   setNumCorrect: React.Dispatch<React.SetStateAction<number[]>>,
 ) => {
@@ -24,7 +24,6 @@ export const createTermMatchDisplay = (
   };
 
   useEffect(() => {
-    // Calculate number of correct responses whenever selectedAnswers or termObject changes
     const correctCount = termArray.reduce<number>((count, key) => {
       const selectedValue = selectedAnswers[key];
       const answer = termObject[key];
@@ -33,14 +32,12 @@ export const createTermMatchDisplay = (
       }
       return count;
     }, 0);
-
-    // Update numCorrect state with functional update
     setNumCorrect((prevNumCorrect) => {
       const newCorrectCount =
         typeof correctCount === "number"
           ? correctCount
           : prevNumCorrect[0] || 0;
-      const newIncorrectCount = prevNumCorrect[1] || 0; // Keep the second element unchanged
+      const newIncorrectCount = prevNumCorrect[1] || 0;
       return [newCorrectCount, newIncorrectCount];
     });
   }, [selectedAnswers, termObject, termArray, setNumCorrect]);
@@ -52,7 +49,7 @@ export const createTermMatchDisplay = (
         const selectedValue = selectedAnswers[key];
 
         let indicator = null;
-        if (selectedValue === answer) {
+        if (answer && selectedValue === answer) {
           indicator = <span className="text-green-500">✓</span>;
         } else if (selectedValue && selectedValue !== answer) {
           indicator = <span className="text-red-500">✗</span>;

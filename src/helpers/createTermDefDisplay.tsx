@@ -1,9 +1,7 @@
-export type termObject = {
-  [key: string]: string;
-};
+import { TermObject } from "terms/deckObject";
 
 export const createTermDefDisplay = (
-  termObject: termObject,
+  termObject: TermObject,
   termArray: string[],
 ) => {
   return (

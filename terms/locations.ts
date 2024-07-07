@@ -1,6 +1,6 @@
-import { termObject } from "~/helpers/createTermDefDisplay";
+import { TermObject } from "./deckObject";
 
-export const locationsTerms: termObject = { "sagittal plane": "vertical divide; left/right",
+export const locationsTerms: TermObject = { "sagittal plane": "vertical divide; left/right",
 "median plane": "vertical divide; left/right",
 "parasagittal plane": "parallel to safittal, off to the side",
 "coronal plane": "vertical divide; front/back",

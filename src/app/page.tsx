@@ -1,4 +1,5 @@
 import Link from "next/link";
+import DeckLinks from "./DeckLinks";
 
 export default function HomePage() {
   return (
@@ -8,13 +9,15 @@ export default function HomePage() {
           Anatomy <span className="text-[hsl(280,100%,70%)]">&</span> Physiology
         </h1>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8">
-          <Link
+          <DeckLinks />
+          {/* <Link
             className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-            href="/location-location-location"
+            href="/locations"
           >
             <h3 className="text-2xl font-bold">Locations</h3>
             <div className="text-lg">Location terminology</div>
-          </Link>
+          </Link> */}
+
           {/* <Link
             className="flex max-w-xs flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
             href="https://create.t3.gg/en/introduction"

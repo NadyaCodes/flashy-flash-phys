@@ -1,14 +1,25 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import { locationsTerms } from "terms/locations";
 import { createTermDefDisplay } from "~/helpers/createTermDefDisplay";
 import { shuffleTerms } from "~/helpers/shuffleTerms";
 import MatchMenu from "./matchMenu";
+import { deckObject, emptyDeckObject } from "terms/deckObject";
+import { usePathname } from "next/navigation";
 
-export default function LocationLocationLocation() {
-  const [locationsKeys, setLocationsKeys] = useState(
-    Object.keys(locationsTerms),
+export default function ChapterComponent() {
+  const deck = usePathname().slice(1);
+
+  const deckObjectKeys = Object.keys(deckObject);
+
+  const localDeckObjectItem =
+    deckObjectKeys.find((element) => deckObject[element]?.unitCode === deck) ||
+    "no-deck";
+
+  const localDeckObject = deckObject[localDeckObjectItem] || emptyDeckObject;
+
+  const [chapterKeys, setChapterKeys] = useState(
+    Object.keys(localDeckObject?.data),
   );
   const [defsVisible, setDefsVisible] = useState(false);
 
@@ -16,16 +27,14 @@ export default function LocationLocationLocation() {
     setDefsVisible(!defsVisible);
   };
 
-  const setTerms = (locationsKeys: string[]) =>
-    createTermDefDisplay(locationsTerms, locationsKeys);
-  const [allLocationsDisplay, setLocationsDisplay] = useState(
-    setTerms(locationsKeys),
-  );
+  const setTerms = (chapterKeys: string[]) =>
+    createTermDefDisplay(localDeckObject.data, chapterKeys);
+  const [chapterDisplay, setChapterDisplay] = useState(setTerms(chapterKeys));
 
-  const shuffleLocations = () => {
-    const newLocations = shuffleTerms(locationsKeys);
-    setLocationsKeys(newLocations);
-    setLocationsDisplay(setTerms(newLocations));
+  const shuffleItems = () => {
+    const newItems = shuffleTerms(chapterKeys);
+    setChapterKeys(newItems);
+    setChapterDisplay(setTerms(newItems));
   };
 
   return (
@@ -39,19 +48,24 @@ export default function LocationLocationLocation() {
         </Link>
         <div className="flex justify-center">
           <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
-            Location,{" "}
-            <span className="text-[hsl(280,100%,70%)]">Location, </span>{" "}
-            Location
+            {localDeckObject.group.toLocaleUpperCase()}{" "}
+            {localDeckObject.chapter}:{" "}
+            <span className="capitalize text-[hsl(280,100%,70%)]">
+              {localDeckObject.unitCode}
+            </span>
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8"></div>
         </div>
         <button
           className="flex w-fit flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
-          onClick={shuffleLocations}
+          onClick={shuffleItems}
         >
           <h3 className="text-2xl font-bold">Shuffle</h3>
         </button>
-        <MatchMenu locationsKeys={locationsKeys} />
+        <MatchMenu
+          localDeckObject={localDeckObject}
+          chapterKeys={chapterKeys}
+        />
         <div>
           <button
             onClick={toggleVisibility}
@@ -59,7 +73,7 @@ export default function LocationLocationLocation() {
           >
             {defsVisible ? "Hide" : "Show"} Definitions
           </button>
-          {defsVisible && <div className="">{allLocationsDisplay}</div>}
+          {defsVisible && <div className="">{chapterDisplay}</div>}
         </div>
       </div>
     </main>
