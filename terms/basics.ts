@@ -1,5 +1,7 @@
 import { TermObject } from "./deckObject";
 
+//https://www.youtube.com/watch?v=uBGl2BujkPQ&list=PL8dPuuaLjXtOAKed_MxxWBNaPno5h3Zs8&index=2
+
 export const directionalTerms: TermObject = {
 "sagittal plane": "vertical plane dividing body into left and right parts",
 "median plane": "plane directly through the center of the body; the midline sagittal plane",

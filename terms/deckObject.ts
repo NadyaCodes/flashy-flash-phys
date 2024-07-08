@@ -1,7 +1,12 @@
 import { directionalTerms, introTerms } from "./basics";
+import { tissueTerms } from "./tissues";
 export type TermObject = {
   [key: string]: string;
 };
+
+
+//other playlists to check out:
+//https://www.youtube.com/watch?v=PWGBqskV1UQ&list=PL8dPuuaLjXtPW_ofbxdHNciuLoTRLPMgB
 
 export type Deck = {
   group: string;
@@ -35,5 +40,12 @@ export const deckObject: DeckObject = {
     unitCode: "directions",
     unitName: "Directional Terms",
     data: directionalTerms
+  },
+  "2": {
+    group: "tissues",
+    chapter: "Chapter 2",
+    unitCode: "tissues",
+    unitName: "Tissue Terms 1",
+    data: tissueTerms
   }
 }
