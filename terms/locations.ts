@@ -2,7 +2,7 @@ import { TermObject } from "./deckObject";
 
 export const locationsTerms: TermObject = { "sagittal plane": "vertical divide; left/right",
 "median plane": "vertical divide; left/right",
-"parasagittal plane": "parallel to safittal, off to the side",
+"parasagittal plane": "parallel to sagittal, off to the side",
 "coronal plane": "vertical divide; front/back",
 "frontal plane": "vertical divide; front/back",
 "transverse": "top & bottom",

@@ -30,7 +30,7 @@ export const deckObject: DeckObject = {
     group: "basics",
     chapter: "Chapter 2",
     unitCode: "dummy",
-    data: {"dummy1": "Dummy 1", "dummy2": "Dummy 2"}
+    data: {"dummy1": "Dummy 1", "dummy2": "Dummy 2", "dummy3": "Dummy 3", "dummy4": "Dummy 4"}
   },
   "2": {
     group: "beyond",
