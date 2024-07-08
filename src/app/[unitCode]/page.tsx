@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { createTermDefDisplay } from "~/helpers/createTermDefDisplay";
 import { shuffleTerms } from "~/helpers/shuffleTerms";
-import MatchMenu from "./matchMenu";
+import MatchMenu from "./MatchMenu";
 import VocabFlash from "./VocabFlash";
 import { deckObject, emptyDeckObject } from "terms/deckObject";
 import { usePathname } from "next/navigation";
@@ -15,10 +15,10 @@ export default function ChapterComponent() {
   const deckObjectKeys = Object.keys(deckObject);
 
   const localDeckObjectItem =
-    deckObjectKeys.find((element) => deckObject[element]?.unitCode === deck) ||
+    deckObjectKeys.find((element) => deckObject[element]?.unitCode === deck) ??
     "no-deck";
 
-  const localDeckObject = deckObject[localDeckObjectItem] || emptyDeckObject;
+  const localDeckObject = deckObject[localDeckObjectItem] ?? emptyDeckObject;
 
   const [chapterKeys, setChapterKeys] = useState(
     Object.keys(localDeckObject?.data),

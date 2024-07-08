@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { Deck } from "terms/deckObject";
+import type { Deck } from "terms/deckObject";
 import { createVocabFlashDisplay } from "~/helpers/createVocabFlashDisplay";
 
 type VocabFlashProps = { localDeckObject: Deck; chapterKeys: string[] };

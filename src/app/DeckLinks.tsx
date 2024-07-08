@@ -1,11 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import {
-  Deck,
-  DeckObject,
-  deckObject,
-  emptyDeckObject,
-} from "terms/deckObject";
+import { deckObject, emptyDeckObject } from "terms/deckObject";
+import type { Deck, DeckObject } from "terms/deckObject";
 
 export default function DeckLinks() {
   const groupedDecks: Record<string, Deck[]> = groupDecksByGroup(deckObject);
@@ -33,7 +29,7 @@ export default function DeckLinks() {
 
 function groupDecksByGroup(deckObject: DeckObject): Record<string, Deck[]> {
   return Object.keys(deckObject).reduce((acc: Record<string, Deck[]>, key) => {
-    const deck = deckObject[key] || emptyDeckObject;
+    const deck = deckObject[key] ?? emptyDeckObject;
     if (!acc[deck.group]) {
       acc[deck.group] = [];
     }

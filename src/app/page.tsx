@@ -1,4 +1,3 @@
-import Link from "next/link";
 import DeckLinks from "./DeckLinks";
 
 export default function HomePage() {

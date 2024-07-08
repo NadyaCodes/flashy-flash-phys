@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { TermObject } from "terms/deckObject";
+import type { TermObject } from "terms/deckObject";
 
 export const createTermMatchDisplay = (
   termObject: TermObject,
@@ -8,9 +8,9 @@ export const createTermMatchDisplay = (
   setNumCorrect: React.Dispatch<React.SetStateAction<number[]>>,
 ) => {
   const allDrops = Object.values(termObject);
-  const [selectedAnswers, setSelectedAnswers] = useState<{
-    [key: string]: string;
-  }>({});
+  const [selectedAnswers, setSelectedAnswers] = useState<
+    Record<string, string>
+  >({});
 
   const handleSelectChange = (
     event: React.ChangeEvent<HTMLSelectElement>,

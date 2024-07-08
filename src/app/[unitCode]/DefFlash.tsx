@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import React from "react";
-import { Deck } from "terms/deckObject";
+import type { Deck } from "terms/deckObject";
 import { findRandomArrayIndex } from "~/helpers/findRandomIndex";
 
 type DefFlashProps = { localDeckObject: Deck; chapterKeys: string[] };
@@ -34,7 +34,7 @@ export default function DefFlash({
   };
 
   const handleNextCardWrong = () => {
-    let newTermList = [...termList];
+    const newTermList = [...termList];
     let newIndex = findRandomArrayIndex(newTermList);
     while (newIndex === currentCard && newTermList.length > 1) {
       newIndex = findRandomArrayIndex(newTermList);

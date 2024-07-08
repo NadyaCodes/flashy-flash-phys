@@ -1,4 +1,4 @@
-import { TermObject } from "terms/deckObject";
+import type { TermObject } from "terms/deckObject";
 
 export const createTermDefDisplay = (
   termObject: TermObject,

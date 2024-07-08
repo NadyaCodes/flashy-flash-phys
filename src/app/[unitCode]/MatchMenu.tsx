@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Deck } from "terms/deckObject";
+import type { Deck } from "terms/deckObject";
 import { createTermMatchDisplay } from "~/helpers/createTermMatchDisplay";
 
 type MatchMenuProps = { localDeckObject: Deck; chapterKeys: string[] };
