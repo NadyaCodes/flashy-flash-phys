@@ -23,19 +23,7 @@ export const deckObject: DeckObject = {
   "0": {
     group: "basics",
     chapter: "Chapter 1",
-    unitCode: "locations",
+    unitCode: "directions",
     data: locationsTerms
-  },
-  "1": {
-    group: "basics",
-    chapter: "Chapter 2",
-    unitCode: "dummy",
-    data: {"dummy1": "Dummy 1", "dummy2": "Dummy 2", "dummy3": "Dummy 3", "dummy4": "Dummy 4"}
-  },
-  "2": {
-    group: "beyond",
-    chapter: "Chapter 1",
-    unitCode: "dummy2",
-    data: {"dummy3": "Dummy 3", "dummy4": "Dummy 4"}
   }
 }
