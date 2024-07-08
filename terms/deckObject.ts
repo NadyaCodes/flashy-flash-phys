@@ -1,4 +1,4 @@
-import { locationsTerms } from "./locations";
+import { directionalTerms, introTerms } from "./basics";
 export type TermObject = {
   [key: string]: string;
 };
@@ -25,8 +25,15 @@ export const deckObject: DeckObject = {
   "0": {
     group: "basics",
     chapter: "Chapter 1",
+    unitCode: "intro",
+    unitName: "Basic Terms",
+    data: introTerms
+  },
+  "1": {
+    group: "basics",
+    chapter: "Chapter 1",
     unitCode: "directions",
-    unitName: "Body Directions",
-    data: locationsTerms
+    unitName: "Directional Terms",
+    data: directionalTerms
   }
 }

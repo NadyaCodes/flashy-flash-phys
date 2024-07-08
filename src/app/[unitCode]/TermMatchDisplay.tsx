@@ -63,9 +63,9 @@ const TermMatchDisplay: React.FC<TermMatchDisplayProps> = ({
 
         return (
           <div key={key} className="flex items-center">
-            <span className="font-bold">{key}</span>
+            <span className="w-1/2 font-bold">{key}</span>
             <select
-              className="m-2 text-indigo-900"
+              className="m-2 w-1/2 text-indigo-900"
               value={selectedValue}
               onChange={(e) => handleSelectChange(e, key)}
             >
