@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { createTermDefDisplay } from "~/helpers/createTermDefDisplay";
 import { shuffleTerms } from "~/helpers/shuffleTerms";
-import MatchMenu from "./MatchMenu";
+import MatchMenu from "./matchMenu";
 import VocabFlash from "./VocabFlash";
 import { deckObject, emptyDeckObject } from "terms/deckObject";
 import { usePathname } from "next/navigation";
