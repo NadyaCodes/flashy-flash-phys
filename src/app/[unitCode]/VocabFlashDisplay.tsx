@@ -1,20 +1,25 @@
 "use client";
-import { useState } from "react";
+import React, { useState } from "react";
 import type { Deck } from "terms/deckObject";
-import { findRandomArrayIndex } from "./findRandomIndex";
+import { findRandomArrayIndex } from "../../helpers/findRandomIndex";
 
 export type FlashObject = {
   correct: boolean;
   data: [string, string];
 };
 
-export const createVocabFlashDisplay = (
-  deckObject: Deck,
-  termArray: string[],
-) => {
+type VocabFlashDisplayProps = {
+  deckObject: Deck;
+  termArray: string[];
+};
+
+const VocabFlashDisplay: React.FC<VocabFlashDisplayProps> = ({
+  deckObject,
+  termArray,
+}) => {
   const [termList, setTermList] = useState<string[]>(termArray);
   const [currentCard, setCurrentCard] = useState<number>(
-    findRandomArrayIndex(termList) || 0,
+    findRandomArrayIndex(termList) ?? 0,
   );
   const [guessedTerm, setGuessedTerm] = useState<string>("");
   const [returnCard, setReturnCard] = useState<boolean>(false);
@@ -74,3 +79,5 @@ export const createVocabFlashDisplay = (
     </div>
   );
 };
+
+export default VocabFlashDisplay;

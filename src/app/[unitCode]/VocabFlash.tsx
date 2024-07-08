@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import type { Deck } from "terms/deckObject";
-import { createVocabFlashDisplay } from "~/helpers/createVocabFlashDisplay";
+import VocabFlashDisplay from "./VocabFlashDisplay";
 
 type VocabFlashProps = { localDeckObject: Deck; chapterKeys: string[] };
 
@@ -9,9 +9,9 @@ export default function VocabFlash({
   localDeckObject,
   chapterKeys,
 }: VocabFlashProps) {
-  const vocabFlashDisplay = createVocabFlashDisplay(
-    localDeckObject,
-    chapterKeys,
+  return (
+    <div>
+      <VocabFlashDisplay deckObject={localDeckObject} termArray={chapterKeys} />
+    </div>
   );
-  return <div>{vocabFlashDisplay}</div>;
 }

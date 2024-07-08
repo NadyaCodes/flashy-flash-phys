@@ -11,7 +11,7 @@ export default function DefFlash({
 }: DefFlashProps) {
   const [termList, setTermList] = useState<string[]>(chapterKeys);
   const [currentCard, setCurrentCard] = useState<number>(
-    findRandomArrayIndex(termList) || 0,
+    findRandomArrayIndex(termList) ?? 0,
   );
   const [done, setDone] = useState<boolean>(false);
   const [showAnswer, setShowAnswer] = useState(false);

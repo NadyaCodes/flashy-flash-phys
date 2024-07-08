@@ -2,11 +2,17 @@
 import React, { useState, useEffect } from "react";
 import type { TermObject } from "terms/deckObject";
 
-export const createTermMatchDisplay = (
-  termObject: TermObject,
-  termArray: string[],
-  setNumCorrect: React.Dispatch<React.SetStateAction<number[]>>,
-) => {
+type TermMatchDisplayProps = {
+  termObject: TermObject;
+  termArray: string[];
+  setNumCorrect: React.Dispatch<React.SetStateAction<number[]>>;
+};
+
+const TermMatchDisplay: React.FC<TermMatchDisplayProps> = ({
+  termObject,
+  termArray,
+  setNumCorrect,
+}) => {
   const allDrops = Object.values(termObject);
   const [selectedAnswers, setSelectedAnswers] = useState<
     Record<string, string>
@@ -36,8 +42,8 @@ export const createTermMatchDisplay = (
       const newCorrectCount =
         typeof correctCount === "number"
           ? correctCount
-          : prevNumCorrect[0] || 0;
-      const newIncorrectCount = prevNumCorrect[1] || 0;
+          : prevNumCorrect[0] ?? 0;
+      const newIncorrectCount = prevNumCorrect[1] ?? 0;
       return [newCorrectCount, newIncorrectCount];
     });
   }, [selectedAnswers, termObject, termArray, setNumCorrect]);
@@ -77,3 +83,5 @@ export const createTermMatchDisplay = (
     </div>
   );
 };
+
+export default TermMatchDisplay;
