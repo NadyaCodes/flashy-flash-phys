@@ -68,11 +68,11 @@ export default function ChapterComponent() {
           <h3 className="text-2xl font-bold">Back</h3>
         </Link>
         <div className="flex justify-center">
-          <h1 className="text-5xl font-extrabold tracking-tight text-white sm:text-[5rem]">
+          <h1 className="text-5xl font-extrabold tracking-tight text-white">
             {localDeckObject.group.toLocaleUpperCase()}{" "}
             {localDeckObject.chapter}:{" "}
             <span className="capitalize text-[hsl(280,100%,70%)]">
-              {localDeckObject.unitCode}
+              {localDeckObject.unitName}
             </span>
           </h1>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:gap-8"></div>

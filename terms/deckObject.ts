@@ -7,6 +7,7 @@ export type Deck = {
   group: string;
   chapter: string;
   unitCode: string;
+  unitName: string;
   data: Record<string, string>;
 };
 
@@ -16,6 +17,7 @@ export const emptyDeckObject = {
   group: "no-group",
   chapter: "no-chapter",
   unitCode: "no-chapter",
+  unitName: "no-chapter",
   data: { none: "none" },
 }
 
@@ -24,6 +26,7 @@ export const deckObject: DeckObject = {
     group: "basics",
     chapter: "Chapter 1",
     unitCode: "directions",
+    unitName: "Body Directions",
     data: locationsTerms
   }
 }
