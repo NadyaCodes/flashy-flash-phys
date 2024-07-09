@@ -1,5 +1,6 @@
 //https://www.youtube.com/watch?v=i5tR3csCWYo&list=PL8dPuuaLjXtOAKed_MxxWBNaPno5h3Zs8&index=3
 //https://www.youtube.com/watch?v=lUe_RI_m-Vg
+//https://www.youtube.com/watch?v=D-SzmURNBH0
 
 
 export const tissueTerms = {
@@ -68,5 +69,40 @@ export const tissueTerms2 = {
   "exocrine glands": "part of glandular epithelium that secrete juices into tubes or ducts that lead to the outside of body",
   "thyroxine": "hormone secreted by an endocrine gland (thyroid) that needs to be distributed through body",
   "exocrine gland secretions": "sweat, saliva, mucous, stomach acid and milk",
+}
 
+export const tissueTerms3 = {
+  "Marfan Syndrome": "genetic disorder of the connective tissue",
+  "connective tissue": "most abundant and diverse of the tissue types",
+  "proper connective tissue": "connective tissue in ligaments & skin",
+  "cartilage": "strong, flexible connective tissue that protects your joints and bones",
+  "bone": "rigid and strong connective tissue with mineralized extracellular components that contributes to numerous body functions",
+  "blood": "transports hormones, nutrients & other material all over body",
+  "fat": "type of proper connective tissue which provides insulation & fuel storage",
+  "bind support protect": "three things bones, tendons and cartilage do",
+  "mesenchyme": "loose and fluid type of embryonic tissue - origin for all connective tissues",
+  "different" : "do connective tissues have same or different degrees of vascularity?",
+  "vascularity": "blood flow",
+  "nonliving": "are connective tissues made of living or nonliving material?",
+  "extracellular matrix": "nonliving material that makes up most connective tissue",
+  "matrix between cells": "is matrix between cells or inside of connective tissue cells more important?",
+  "ground substance": "watery, rubbery unstructured material that fills in the spaces between cells; mostly starch and protein",
+  "proteoglycans": "class of glycoproteins that are found in the extracellular matrix of connective tissue",
+  "glycosaminoglycans": "long, starchy strands that branch off of proteoglycans",
+  "fibers": "provide support and structure to otherwise shapeless ground substance",
+  "collagen": "strongest and most abundant type of fiber; strand of protein",
+  "elastic": "longer and thinner than collagen; form branching framework within matrix",
+  "elastin": "protein that makes up elastic fibers",
+  "reticular": "short, finer collagen fibers with extra coating of glycoprotein",
+  "immature cells": "identifiable by suffix -blast",
+  "stem cells": "cells still in the process of dividing to replicate themselves",
+  "blast cell function": "secrete the ground substance and fibers that form its unique matrix",
+  "chondroblasts": "blast cells of cartilage",
+  "osteoblasts": "blast cells of bones",
+  "mature cells": "identifiable by suffix -cyte",
+  "osteocytes": "cyte cells of bones",
+  "chondrocytes": "cyte cells of cartilage",
+  "macrophages": "guard cells that patrol your connective tissue",
+  "leukocytes": "cells that scour the circulatory system fighting off infection",
+  "elastic fibers": "the most common targets of Marfan Syndrome"
 }
