@@ -1,4 +1,6 @@
 //https://www.youtube.com/watch?v=i5tR3csCWYo&list=PL8dPuuaLjXtOAKed_MxxWBNaPno5h3Zs8&index=3
+//https://www.youtube.com/watch?v=lUe_RI_m-Vg
+
 
 export const tissueTerms = {
   "cell specialization": "process by which generic cells change into specific cells meant to do certain tasks within the body",
@@ -19,7 +21,7 @@ export const tissueTerms = {
   "central nervous system": "brain & spinal cord",
   "peripheral nervous system": "network of nerves throughout body",
   "nervous tissue functions": "sensing stimuli & sending electrical impulses through body",
-  "neurons": "nerve cells that send messages all over your body",
+  "neurons": "type of nerve cells that send messages all over your body",
   "glial cells": "cells that hold nerve cells in place and help them work the way they should; tether them to blood vessels",
   "cell body": "easy name for neuron's life support; nucleus, mitochondria & DNA",
   "soma": "another term for neuron's cell body",
@@ -31,4 +33,40 @@ export const tissueTerms = {
   "intercalated disks": "glue that holds muscle cells together when contracting; contain pores for signal pass-through",
   "uninucleate": "one nucleus per cell",
   "smooth muscle": "short, tapered involuntary muscle cells, but no striations; lines walls of blood vessels & some organs",
+}
+
+export const tissueTerms2 = {
+  "epithelial tissue": "tissue that lines, covers and organizes body",
+  "proper epithelium": "covers and lines outer and inner body",
+  "glandular epithelium": "forms glands and secretes hormones",
+  "epidermis": "top layer of skin in your body",
+  "cranial cavity": "inside surface of the base of the skull",
+  "pericardial cavity": "space between visceral and parietal pericardial layers",
+  "thoracic cavity": "space inside thorax that contains heart lungs & other organs",
+  "vertebral cavity": "space formed by vertebral column that stores integral portion of nervous system",
+  "abdominal cavity": "space between abdominal wall and spine",
+  "pelvic cavity": "bowl-like structure that sits below abdominal cavity",
+  "invagination": "action/process of being turned inside out or folded back on itself to form a cavity or pouch",
+  "avascular": "not associated with or supplied with blood cells (all epithelial cells)",
+  "squamous cell shape": "epithelial cell that is thin and flat like fish scales",
+  "squamous cell function": "epithelial cells that perform fast absorption and diffusion",
+  "cuboidal cell shape": "epithelial cell that is shaped like square or cube",
+  "cuboidal cell function": "epithelial cell that absorb nutrients and produce secretions",
+  "columnar cell shape": "epithelial cell that is shaped like a column",
+  "columnar cell function": "epithelial cell that cushions underlying tissues",
+  "simple epithelium": "one layer of cells",
+  "stratified": "multiple layers of cells set on top of each other like bricks",
+  "pseudostratified": "mostly one layer, but cells can be different shapes and sizes",
+  "simple squamous epithelium": "single layer of flat cells, scale-like cells",
+  "stratified cuboidal tissue": "layers of cube-shaped cells",
+  "polar": "all epithelial cells have this trait of distinct sides",
+  "apical side": "side of epithelial cells exposed to outside of body or internal cavity its lining",
+  "basal side": "the lower parts of the epithelium, attached to basement membrane",
+  "basement membrane": "thin layer of mostly collagen that sits between epithelial tissues and underlying connective tissue",
+  "selectively permeable": "trait of many epithelial cell layers that makes them able to absorb and filter",
+  "endocrine glands": "part of glandular epithelium that secretes hormones right into bloodstream or nearby cells",
+  "exocrine glands": "part of glandular epithelium that secrete juices into tubes or ducts that lead to the outside of body",
+  "thyroxine": "hormone secreted by an endocrine gland (thyroid) that needs to be distributed through body",
+  "exocrine gland secretions": "sweat, saliva, mucous, stomach acid and milk",
+
 }
