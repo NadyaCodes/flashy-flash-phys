@@ -52,7 +52,7 @@ export const tissueTerms2 = {
   "squamous cell shape": "epithelial cell that is thin and flat like fish scales",
   "squamous cell function": "epithelial cells that perform fast absorption and diffusion",
   "cuboidal cell shape": "epithelial cell that is shaped like square or cube",
-  "cuboidal cell function": "epithelial cell that absorb nutrients and produce secretions",
+  "cuboidal cell function": "epithelial cell that absorbs nutrients and produces secretions",
   "columnar cell shape": "epithelial cell that is shaped like a column",
   "columnar cell function": "epithelial cell that cushions underlying tissues",
   "simple epithelium": "one layer of cells",
