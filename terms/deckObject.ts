@@ -1,5 +1,6 @@
 import { directionalTerms, introTerms } from "./basics";
 import { tissueTerms, tissueTerms2, tissueTerms3 } from "./tissues";
+import { basicAnatomicalTerms } from "./anatomyX";
 export type TermObject = {
   [key: string]: string;
 };
@@ -61,5 +62,12 @@ export const deckObject: DeckObject = {
     unitCode: "tissues3",
     unitName: "Tissue Terms 3",
     data: tissueTerms3
+  },
+  "5": {
+    group: "anatomyX",
+    chapter: "Chapter 1",
+    unitCode: "basic",
+    unitName: "Basic Anatomical Terms",
+    data: basicAnatomicalTerms
   }
 }
