@@ -37,3 +37,30 @@ export const basicAnatomicalTerms = {
   "axial plane": "divides body into transverse sections",
   "central regions of the body": "head, neck, thorax, abdomen & pelvis"
 }
+
+export const tissuesAndOrganization = {
+  "hierarchy of organization": "cells, tissues, organs, organ systems, organisms",
+  "cell": "smallest independent unit of living tissue",
+  "plasma membrane": "provides selective barrier between extracellular and intracellular environment",
+  "cytoplasm": "cytoskeleton and cytosol",
+  "cytoskeleton": "network of tubules and filaments inside cell",
+  "cytosol": "cell gel",
+  "microscopy": "field of using microscopes to view objects",
+  "boundary membrane": "surrounds organelles",
+  "organelles": "functional components of cells",
+  "nucleus": "largest of cell organelles",
+  "nuclear envelope": "nuclear membrane",
+  "deoxyribonucleic acid": "DNA",
+  "nucleolus": "site of ribosomeal RNA synthesis",
+  "smooth endoplasmic reticulum": "found in cells specialized for hormone synthesis and detoxification",
+  "rough endoplasmic reticulum": "synthesizes proteins and enzymes; covered in ribosomes",
+  "endoplasmic reticulum": "system of membrane-bound tubules and cisterna",
+  "ribosomes": "site of protein synthesis",
+  "golgi apparatus": "stack of sacs and cisternae that sort, process and package proteins produced by the rough ER",
+  "vesicles": "transport proteins out of cells",
+  "lysosomes": "vesicles of enzymes that can digest microorganisms and debris",
+  "acid hydrolases": "lysosome digestive enzymes",
+  "peroxisomes": "smaller membrane-bound packets of enzymes",
+  "oxidases": "enzymes in peroxisomes that interact with organic substances to form hydrogen peroxide",
+  "mitochondria": "sites of oxidative phosphorylation and ATP formation"
+}
