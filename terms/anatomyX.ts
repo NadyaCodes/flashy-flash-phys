@@ -38,14 +38,13 @@ export const basicAnatomicalTerms = {
   "central regions of the body": "head, neck, thorax, abdomen & pelvis"
 }
 
-export const tissuesAndOrganization = {
+export const cellParts = {
   "hierarchy of organization": "cells, tissues, organs, organ systems, organisms",
   "cell": "smallest independent unit of living tissue",
   "plasma membrane": "provides selective barrier between extracellular and intracellular environment",
   "cytoplasm": "cytoskeleton and cytosol",
   "cytoskeleton": "network of tubules and filaments inside cell",
   "cytosol": "cell gel",
-  "microscopy": "field of using microscopes to view objects",
   "boundary membrane": "surrounds organelles",
   "organelles": "functional components of cells",
   "nucleus": "largest of cell organelles",
@@ -62,5 +61,72 @@ export const tissuesAndOrganization = {
   "acid hydrolases": "lysosome digestive enzymes",
   "peroxisomes": "smaller membrane-bound packets of enzymes",
   "oxidases": "enzymes in peroxisomes that interact with organic substances to form hydrogen peroxide",
-  "mitochondria": "sites of oxidative phosphorylation and ATP formation"
+  "mitochondria": "sites of oxidative phosphorylation and ATP formation",
+
+}
+
+export const microscopeTerms = {
+  "microscopy": "field of using microscopes to view objects",
+  "frame": "holds a microscope together",
+  "stage": "holds the microscope slide",
+  "fine coarse": "focus knobs that move the microscope stage up and down",
+  "control": "knobs that move stage back and forth under objective",
+  "objective lense": "lense closest to the stage",
+  "ocular lense": "lense in microscope eyepiece",
+  "chemical fixation": "kills cells and stops chemical reactions in preparation for microscope examination",
+  "autolysis": "destruction of cell through the action of its own enzymes",
+  "microtome": "cutting tool used to create extremely thin slices of material",
+  "tangential section" : "a tissue sample that is difficult to examine under the microscope because it has been cut on an angle",
+  "grazing section": "only a small portion removed from a rounded object",
+  "bright stain": "principal stain",
+  "counter stain": "contrasting color to the principal stain",
+  "Hematoxylin": "a basic dye that binds to acidic cell components & stains them purple or blue",
+  "Eosin": "an acidic stain that's going to bind to basic cell components & stains them orangy pink",
+  "Eosin function": "stains cytoplasm filaments, plasma membrane, collagen fibers outside cell",
+  "Hematoxylin function": "stains DNA, RNA, other carbohydrates & certain features of exocellular matrix",
+
+}
+
+export const tissueTermsX = {
+  "adipocyte": "cell specialized in storing energy as fat",
+  "fibrocyte": "type of connective tissue; a cell that produces fibers",
+  "liver": "what organ's cells can have two nuclei",
+  "neuroglia": "another name for glial cells",
+  "muscle": "tissue that has multiple nuclei because it fused during development",
+  "connective epithelial muscle nervous": "4 types of tissue (alphabetical)",
+  "epithelial tissue": "usually avascular selective barrier that covers all external/internal surfaces & makes up glands",
+  "pleura": "slippery epithelial membrane that secretes a small amount of fluid that acts as a lubricant, allowing the lungs to move smoothly",
+  "peritoneum": "epithelial membrane in abdominopelvic cavity that pads and insulates organs, holds them in place & secretes lubricating fluid to reduce friction when rubbing",
+  "connective tissue": "building materials & structural support - fat, ligaments, tendons, organ capsules, bones, cartilage",
+  "muscle tissue": "excitable tissue that contracts & produces motion",
+  "cardiac skeletal smooth": "3 types of muscle tissue (alphabetical)",
+  "nervous tissue": "excitable tissue that is responsible for communication",
+  "tendon": "connects muscle to bone",
+  "ligament": "connects bone to bone at joint",
+  "endothelium": "lines insides of blood vessels",
+  "epidermis": "outer layer of the skin",
+  "parenchymal cells": "responsible for performing the primary function of the tissue",
+  "contractile apparatus": "various activities of these filaments cause muscle to shorten",
+  "lumen": "inside space of a tubular structure,",
+  "skin": "largest body organ",
+  "skin layers": "outer epidermis, avascular epithelial layer, inner dermis, vascular connective tissue",
+  "collagen fibers": "what draws ths skin into relaxed skin tension lines (wrinkles)",
+  "relaxed skin tension lines": "lines parallel to the natural orientation of collagen fibers in the dermis",
+  "Langer lines": "short term for RSTLs",
+  "respiratory system": "transfers oxygen from alveoli to capillaries",
+  "digestive system": "long glandular and muscular tube extending from oral cavity to anus",
+  "urogenital system": "includes urinary system and the male & female reproductive systems",
+  "ureters": "transport urine to the bladder",
+  "urethra": "conveys urine from the bladder",
+  "circulatory system": "distributes body fluids",
+  "arteries": "send blood away from the heart",
+  "veins": "send blood back to heart",
+  "lymph vascular system": "drains extra fluid (called lymph) that has passed out of blood and into tissues & returns it to the blood",
+  "lymph nodes": "filter substances in lymphatic fluid, contain lymphocytes (white blood cells) that help fight infection",
+  "nervous system": "enables rapid and precise communication between CNS and body",
+  "endocrine system": "synthesizes and secretes hormones",
+  "musculoskeletal system": "bones & muscles",
+  "joints": "allow bones to move",
+  "ligaments": "reinforce joints",
+
 }
