@@ -124,7 +124,7 @@ export const tissueTerms4 = {
   "parenchyma": "the key functional elements of an organ",
   "areolar adipose reticular": "3 types of loose conective tissue",
   "regular": "dense connective tissue with tightly bundles of collagen fibers; in places of one-way tension",
-  "tendon": "connects mucle to bone",
+  "tendon": "connects muscle to bone",
   "ligament": "connects bone to bone",
   "irregular": "fibers are thicker and arranged erradically; in places that suport multi-way tension",
   "elastic": "dense tissue around places like joints where it needs more flexibility than rigidity",

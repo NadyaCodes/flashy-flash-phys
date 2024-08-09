@@ -1,6 +1,7 @@
 import { directionalTerms, introTerms } from "./basics";
 import { tissueTerms, tissueTerms2, tissueTerms3, tissueTerms4 } from "./tissues";
 import { basicAnatomicalTerms, cellParts, microscopeTerms, tissueTermsX } from "./anatomyX";
+import { nervousTerms, nervousTerms2 } from "./nervous";
 export type TermObject = {
   [key: string]: string;
 };
@@ -97,5 +98,19 @@ export const deckObject: DeckObject = {
     unitCode: "tissues4",
     unitName: "Tissue Terms 4",
     data: tissueTerms4
+  },
+  "10": {
+    group: "nervous",
+    chapter: "Chapter 4",
+    unitCode: "nervous",
+    unitName: "Nervous Terms 1",
+    data: nervousTerms
+  },
+  "11": {
+    group: "nervous",
+    chapter: "Chapter 4",
+    unitCode: "nervous2",
+    unitName: "Nervous Terms 2",
+    data: nervousTerms2
   }
 }
