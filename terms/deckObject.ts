@@ -1,12 +1,10 @@
-import { directionalTerms, introTerms } from "./basics";
+import { anatomicalTerms } from "./anatomicalTerms";
+import { mnemonics } from "./mnemonics";
 
 export type TermObject = {
   [key: string]: string;
 };
 
-
-//other playlists to check out:
-//https://www.youtube.com/watch?v=PWGBqskV1UQ&list=PL8dPuuaLjXtPW_ofbxdHNciuLoTRLPMgB
 
 export type Deck = {
   group: string;
@@ -27,19 +25,19 @@ export const emptyDeckObject = {
 }
 
 export const deckObject: DeckObject = {
-  "0": {
-    group: "basics",
-    chapter: "Chapter 1",
-    unitCode: "intro",
-    unitName: "Basic Terms",
-    data: introTerms
+  "1.1" : {
+    group: "intro",
+    chapter: "Week 1",
+    unitCode: "anatomical-terms",
+    unitName: "Anatomical Terms",
+    data: anatomicalTerms
   },
-  "1": {
-    group: "basics",
-    chapter: "Chapter 1",
-    unitCode: "directions",
-    unitName: "Directional Terms",
-    data: directionalTerms
-  },
+  "mnem" : {
+    group: "extras",
+    chapter: "Mnemonics & Acronyms",
+    unitCode: "mnmnonics-acronyms",
+    unitName: "Mna Mna",
+    data: mnemonics
+  }
 
 }
