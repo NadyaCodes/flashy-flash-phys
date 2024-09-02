@@ -28,9 +28,10 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
   const currentTerm = termList.length > 0 ? termList[0] : "No Term";
 
   // Ensure that `currentTerm` is a valid key for `deckObject.data`
-  const answerArray = Array.isArray(deckObject.data[currentTerm as string])
-    ? (deckObject.data[currentTerm as string] as string[])
-    : [];
+  const answerArray =
+    currentTerm && Array.isArray(deckObject.data[currentTerm])
+      ? (deckObject.data[currentTerm] as string[])
+      : [];
 
   useEffect(() => {
     setTermList(shuffleArray(chapterKeys));
@@ -160,7 +161,7 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
             ↖️ Reset Deck
           </button>
           <div className="text-xl font-bold">
-            {currentTerm || "No term available"}
+            {currentTerm ?? "No term available"}
           </div>
           <button
             onClick={() => setShowHint(!showHint)}
