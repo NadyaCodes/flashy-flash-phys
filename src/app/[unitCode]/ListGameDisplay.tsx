@@ -25,11 +25,13 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
   const [showHint, setShowHint] = useState(false);
   const [result, setResult] = useState<React.JSX.Element[]>([]);
 
-  const currentTerm = termList.length > 0 ? termList[0] : "No Term";
+  const currentTerm = termList.length > 0 ? termList[0] : "";
 
-  // Ensure that `currentTerm` is a valid key for `deckObject.data`
+  // Handle the case where currentTerm might not be a valid key
   const answerArray =
-    currentTerm && Array.isArray(deckObject.data[currentTerm])
+    currentTerm &&
+    currentTerm !== "" &&
+    Array.isArray(deckObject.data[currentTerm])
       ? (deckObject.data[currentTerm] as string[])
       : [];
 
