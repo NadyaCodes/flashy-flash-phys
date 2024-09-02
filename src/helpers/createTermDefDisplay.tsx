@@ -1,5 +1,5 @@
 import type { TermObject } from "terms/deckObject";
-import { ListObject } from "terms/mnemonics";
+import type { ListObject } from "terms/mnemonics";
 
 export const createTermDefDisplay = (
   termObject: TermObject | ListObject,

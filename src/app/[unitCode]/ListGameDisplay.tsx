@@ -25,8 +25,8 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
   const [showHint, setShowHint] = useState(false);
   const [result, setResult] = useState<React.JSX.Element[]>([]);
 
-  const currentTerm = termList[0];
-  const answerArray = currentTerm ? deckObject.data[currentTerm] : undefined;
+  const currentTerm = termList[0]!;
+  const answerArray = deckObject.data[currentTerm] as string[] | undefined;
 
   useEffect(() => {
     setTermList(shuffleArray(chapterKeys));
@@ -44,12 +44,16 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
   };
 
   const checkGuess = () => {
-    if (answerArray && Array.isArray(answerArray)) {
+    if (
+      answerArray &&
+      Array.isArray(answerArray) &&
+      Array.isArray(answerArray[1])
+    ) {
       const correctAnswer = answerArray[1];
       const submittedAnswer = makeAnswerArray(guessedTerm);
       const localResult: [string, boolean][] = [];
 
-      if (answerArray[2] === "ordered") {
+      if (answerArray[2] === "ordered" && correctAnswer) {
         submittedAnswer.forEach((answer, index) => {
           if (correctAnswer[index]?.toLowerCase() === answer) {
             localResult.push([answer, true]);
@@ -57,7 +61,7 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
             localResult.push([answer, false]);
           }
         });
-      } else if (answerArray[2] === "unordered") {
+      } else if (answerArray[2] === "unordered" && correctAnswer) {
         const resultsArray: string[] = [];
         const correctAnswerLowercase = correctAnswer.map((element) =>
           element.toLowerCase(),
@@ -124,7 +128,7 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
     }
 
     const newTermList = [...termList];
-    const currentTerm = newTermList.shift();
+    const currentTerm = newTermList.shift()!;
 
     if (currentTerm) {
       const newPosition = 3 >= newTermList.length ? newTermList.length : 3;
@@ -156,7 +160,7 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
             ↖️ Reset Deck
           </button>
           <div className="text-xl font-bold">
-            {currentTerm ?? "No term available"}
+            {currentTerm || "No term available"}
           </div>
           <button
             onClick={() => setShowHint(!showHint)}

@@ -59,18 +59,16 @@ const VocabFlashDisplay: React.FC<VocabFlashDisplayProps> = ({
   };
 
   const term = termList[currentCard] ?? "No Term";
+  const currentData = deckObject.data[term];
+  const displayData = Array.isArray(currentData)
+    ? "Invalid Data Format"
+    : currentData ?? "No Data";
 
   return (
     <div className="flex flex-col">
       {done && termList.length > 0 && currentCard !== undefined
         ? "All Done!!"
-        : `Guessing: ${
-            currentCard !== undefined &&
-            currentCard >= 0 &&
-            currentCard < termList.length
-              ? deckObject.data[term] ?? "No Data"
-              : "No Data"
-          }`}
+        : `Guessing: ${displayData}`}
       <input
         type="text"
         value={guessedTerm}
