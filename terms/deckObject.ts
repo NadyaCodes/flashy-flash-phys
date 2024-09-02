@@ -1,5 +1,5 @@
 import { anatomicalTerms } from "./anatomicalTerms";
-import { mnemonics } from "./mnemonics";
+import { ListObject, mnemonics } from "./mnemonics";
 
 export type TermObject = {
   [key: string]: string;
@@ -11,7 +11,8 @@ export type Deck = {
   chapter: string;
   unitCode: string;
   unitName: string;
-  data: Record<string, string>;
+  deckType: string;
+  data: TermObject | ListObject
 };
 
 export type DeckObject = Record<string, Deck>;
@@ -21,6 +22,7 @@ export const emptyDeckObject = {
   chapter: "no-chapter",
   unitCode: "no-chapter",
   unitName: "no-chapter",
+  deckType: "tri",
   data: { none: "none" },
 }
 
@@ -30,6 +32,7 @@ export const deckObject: DeckObject = {
     chapter: "Week 1",
     unitCode: "anatomical-terms",
     unitName: "Anatomical Terms",
+    deckType: "tri",
     data: anatomicalTerms
   },
   "mnem" : {
@@ -37,6 +40,7 @@ export const deckObject: DeckObject = {
     chapter: "Mnemonics & Acronyms",
     unitCode: "mnmnonics-acronyms",
     unitName: "Mna Mna",
+    deckType: "list",
     data: mnemonics
   }
 

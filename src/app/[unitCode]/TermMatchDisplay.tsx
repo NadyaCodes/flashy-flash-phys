@@ -1,9 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import type { TermObject } from "terms/deckObject";
+import { ListObject } from "terms/mnemonics";
 
 type TermMatchDisplayProps = {
-  termObject: TermObject;
+  termObject: TermObject | ListObject;
   termArray: string[];
   setNumCorrect: React.Dispatch<React.SetStateAction<number[]>>;
 };
