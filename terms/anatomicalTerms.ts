@@ -49,7 +49,7 @@ export const anatomicalTerms: TermObject = {
   "extension" : "motion that increases joint angle",
   "adduction" : "move towards midline of body",
   "abduction" : "move away from midline of body",
-  "lateral flexion" : "moving away from midline of body",
+  "lateral flexion" : "moving away from midline of body; bending sideways",
   "radial deviation" : "wrist tilt towards thumb",
   "ulnar deviation" : "wrist tilt towards pinky finger",
   "rotation" : "turning about the axis of the body",
@@ -57,9 +57,11 @@ export const anatomicalTerms: TermObject = {
   "lateral rotation" : "external rotation (incl. 'rotation')",
   "supination" : "palms up",
   "pronation" : "palms down",
-  "inversion" : "foot flexed and sickled inward",
-  "eversion" : "foot flexed and sickled outward",
+  "inversion" : "foot flexed and sickled inward (sole of foot faces midline)",
+  "eversion" : "foot flexed and sickled outward (sole of foot faces away from midline)",
   "axial skeleton" : "axis around which the body moves",
   "appendicular skeleton" : "the appendages",
-  "anatomical position" : "standing, facing forward, palms of hands facing forward"
+  "anatomical position" : "standing, facing forward, palms of hands facing forward",
+  "dorsiflexion" : "flexing the foot upward",
+  "plantarflexion" : "pointing the food downward"
 }
