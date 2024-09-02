@@ -7,7 +7,7 @@ type ListGameDisplayProps = {
 };
 
 const shuffleArray = (array: string[]): string[] => {
-  let shuffled: string[] = [...array];
+  const shuffled: string[] = [...array];
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [shuffled[i], shuffled[j]] = [shuffled[j] as string, shuffled[i] as string];
@@ -45,9 +45,9 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
 
   const checkGuess = () => {
     if (answerArray && Array.isArray(answerArray)) {
-      let correctAnswer = answerArray[1];
-      let submittedAnswer = makeAnswerArray(guessedTerm);
-      let localResult: [string, boolean][] = [];
+      const correctAnswer = answerArray[1];
+      const submittedAnswer = makeAnswerArray(guessedTerm);
+      const localResult: [string, boolean][] = [];
 
       if (answerArray[2] === "ordered") {
         submittedAnswer.forEach((answer, index) => {
@@ -91,7 +91,7 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
             </div>
           );
         }
-        let resultClass =
+        const resultClass =
           "p-3 " + `${element[1] ? "text-green-500" : "text-red-500"}`;
         return (
           <div className={resultClass} key={`result-${index}`}>
@@ -156,7 +156,7 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
             ↖️ Reset Deck
           </button>
           <div className="text-xl font-bold">
-            {currentTerm || "No term available"}
+            {currentTerm ?? "No term available"}
           </div>
           <button
             onClick={() => setShowHint(!showHint)}

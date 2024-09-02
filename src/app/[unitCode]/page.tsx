@@ -4,8 +4,6 @@ import { deckObject, emptyDeckObject } from "terms/deckObject";
 import { usePathname } from "next/navigation";
 import TriGameComponent from "./TriGameComponent";
 import ListGameComponent from "./ListGameComponent";
-import type { TermObject } from "terms/deckObject";
-import type { ListObject } from "terms/mnemonics";
 
 export default function ChapterComponent() {
   const deck = usePathname().slice(1);

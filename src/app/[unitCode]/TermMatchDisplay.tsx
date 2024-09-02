@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import type { TermObject } from "terms/deckObject";
-import { ListObject } from "terms/mnemonics";
+import type { ListObject } from "terms/mnemonics";
 
 type TermMatchDisplayProps = {
   termObject: TermObject | ListObject;
@@ -14,7 +14,7 @@ const TermMatchDisplay: React.FC<TermMatchDisplayProps> = ({
   termArray,
   setNumCorrect,
 }) => {
-  const allDrops = Object.values(termObject);
+  const allDrops = Object.values(termObject as TermObject);
   const [selectedAnswers, setSelectedAnswers] = useState<
     Record<string, string>
   >({});

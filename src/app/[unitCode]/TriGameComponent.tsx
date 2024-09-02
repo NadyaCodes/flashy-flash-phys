@@ -4,7 +4,7 @@ import { shuffleTerms } from "~/helpers/shuffleTerms";
 import MatchMenu from "./MatchMenu";
 import VocabFlash from "./VocabFlash";
 import DefFlash from "./DefFlash";
-import { Deck } from "terms/deckObject";
+import type { Deck } from "terms/deckObject";
 
 type TriGameComponentProps = {
   localDeckObject: Deck;

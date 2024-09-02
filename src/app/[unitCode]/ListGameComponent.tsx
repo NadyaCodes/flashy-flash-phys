@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import { Deck } from "terms/deckObject";
+import type { Deck } from "terms/deckObject";
 import { createTermListDisplay } from "~/helpers/createTermDefDisplay";
-import { findRandomArrayIndex } from "~/helpers/findRandomIndex";
 import ListGameDisplay from "./ListGameDisplay";
 
 type ListGameComponentProps = {
@@ -11,25 +10,11 @@ type ListGameComponentProps = {
 const ListGameComponent: React.FC<ListGameComponentProps> = ({
   localDeckObject,
 }) => {
-  const [chapterKeys, setChapterKeys] = useState(
-    Object.keys(localDeckObject?.data),
-  );
+  const chapterKeys = Object.keys(localDeckObject?.data);
   const [defsVisible, setDefsVisible] = useState(false);
-  // const [matchVisible, setMatchVisible] = useState(false);
-  // const [vocabFlashVisible, setVocabFlashVisible] = useState(false);
-  // const [defFlashVisible, setDefFlashVisible] = useState(false);
 
   const toggleVisibility = (item: string) => {
     switch (item) {
-      // case "defFlash":
-      //   setDefFlashVisible(!defFlashVisible);
-      //   break;
-      // case "vocabFlash":
-      //   setVocabFlashVisible(!vocabFlashVisible);
-      //   break;
-      // case "match":
-      //   setMatchVisible(!matchVisible);
-      //   break;
       case "defs":
         setDefsVisible(!defsVisible);
         break;
@@ -41,18 +26,7 @@ const ListGameComponent: React.FC<ListGameComponentProps> = ({
 
   const setTerms = (chapterKeys: string[]) =>
     createTermListDisplay(localDeckObject.data, chapterKeys);
-  const [chapterDisplay, setChapterDisplay] = useState(setTerms(chapterKeys));
-
-  // const [termList, setTermList] = useState<string[]>(chapterKeys);
-  // const [currentCard, setCurrentCard] = useState<number>(
-  //   findRandomArrayIndex(termList) ?? 0,
-  // );
-
-  // const shuffleItems = () => {
-  //   const newItems = shuffleTerms(chapterKeys);
-  //   setChapterKeys(newItems);
-  //   setChapterDisplay(setTerms(newItems));
-  // };
+  const chapterDisplay = setTerms(chapterKeys);
 
   return (
     <div>
