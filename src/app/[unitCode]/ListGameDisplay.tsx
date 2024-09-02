@@ -25,8 +25,8 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
   const [showHint, setShowHint] = useState(false);
   const [result, setResult] = useState<React.JSX.Element[]>([]);
 
-  const currentTerm = termList[0] ?? 0;
-  const answerArray = (deckObject.data[currentTerm] as string[]) ?? [""];
+  const currentTerm = termList[0]!;
+  const answerArray = deckObject.data[currentTerm] as string[];
 
   useEffect(() => {
     setTermList(shuffleArray(chapterKeys));
