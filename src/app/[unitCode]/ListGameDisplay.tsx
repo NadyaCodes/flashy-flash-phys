@@ -40,16 +40,12 @@ const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
     return string
       .split("**")
       .map((substring) => substring.trim().toLowerCase())
-      .map((substring) => (substring === "" ? "_" : substring)); // Replace empty strings with "_"
+      .map((substring) => (substring === "" ? "_" : substring));
   };
 
   const checkGuess = () => {
-    if (
-      answerArray &&
-      Array.isArray(answerArray) &&
-      Array.isArray(answerArray[1])
-    ) {
-      const correctAnswer = answerArray[1];
+    if (answerArray && Array.isArray(answerArray[1])) {
+      const correctAnswer: string[] = answerArray[1];
       const submittedAnswer = makeAnswerArray(guessedTerm);
       const localResult: [string, boolean][] = [];
 
