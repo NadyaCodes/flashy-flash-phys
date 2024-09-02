@@ -6,13 +6,19 @@ type ListGameDisplayProps = {
   deckObject: Deck;
 };
 
-const shuffleArray = (array: string[]): string[] => {
-  const shuffled: string[] = [...array];
+const shuffleArray = (array: (string | undefined)[]): string[] => {
+  // Copy the array to avoid mutating the original one
+  const shuffled: (string | undefined)[] = [...array];
+
+  // Shuffle the array using the Fisher-Yates algorithm
   for (let i = shuffled.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
-    [shuffled[i], shuffled[j]] = [shuffled[j] as string, shuffled[i] as string];
+    // Swap elements (allowing for undefined values)
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
-  return shuffled;
+
+  // Filter out undefined values and return only defined values
+  return shuffled.filter((item): item is string => item !== undefined);
 };
 
 const ListGameDisplay: React.FC<ListGameDisplayProps> = ({
