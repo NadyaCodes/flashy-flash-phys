@@ -84,7 +84,7 @@ const TriGameComponent: React.FC<TriGameComponentProps> = ({
             {vocabFlashVisible ? "Hide" : "Show"} Vocab Flash Game
           </button>
           {vocabFlashVisible && (
-            <div className="">
+            <div className="absolute left-0 w-screen p-10 md:left-1/2 md:w-1/2 md:-translate-x-1/2 md:transform">
               <VocabFlash
                 localDeckObject={localDeckObject}
                 chapterKeys={chapterKeys}
@@ -109,7 +109,7 @@ const TriGameComponent: React.FC<TriGameComponentProps> = ({
           )}
         </div>
       </div>
-      <div>
+      <div className="mt-28">
         <button
           onClick={() => toggleVisibility("defs")}
           className="flex w-fit flex-col gap-4 rounded-xl bg-white/10 p-4 text-white hover:bg-white/20"
