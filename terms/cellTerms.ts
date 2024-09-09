@@ -48,7 +48,7 @@ export const cellTerms: TermObject = {
   "adipose" : "the type of tissue that stores fat",
 }
 
-export const cellularRespiration = {
+export const cellularRespiration: TermObject = {
   "anabolism" : "the building-up aspect of metabolism",
   "catabolism" : "the breakdown down aspect of metabolism that releases energy",
   "anabolic steroids" : "substance that builds up complex proteins",
@@ -87,7 +87,7 @@ export const cellularRespiration = {
   "NADH FADH2" : "crucial products of citric acid cycle",
   "oxidative phosphorylation" : "the umbrella term for the ETC and chemiosmosis",
   "electron transport chain" : "ETC",
-  "NAD+ FAD" : "the link between TCA and ETC (the product version)",
+  "NAD+ FAD" : "the link between TCA and ETC (the product of ETC version)",
   "2.5" : "How many ATPs per 1 NADH",
   "1.5" : "How many ATPs per 1 FADH2",
   "lower" : "high-energy electrons move to _____ energy levels as they are transferred from carrier to carrier through ETC",
@@ -99,4 +99,29 @@ export const cellularRespiration = {
   "lactate" : "if there is no extra oxygen, what is pyruvate converted into",
   "anaerobic" : "what condition makes pyruvate be converted to lactate instead of ACoA",
   "more" : "do aerobic pathways create more or less energy?",
+}
+
+export const membraneTerms: TermObject = {
+  "plasma membrane" : "another name for cell membrane",
+  "extracellular" : "space outside of cell",
+  "intracellular" : "space within a cell",
+  "phospholipid" : "most abundant membrane lipid",
+  "cholesterol" : "a second type of membrane lipid (not the obvious)",
+  "polar" : "a molecule that has a positive and negative end",
+  "nonpolar" : "a molecule that doesn't have a charge on either end",
+  "hydrophilic" : "trait of the phospholipid head",
+  "hydrophobic" : "trait of the phospholipid tail",
+  "lipid protein carbohydrate" : "3 most common molecule types in the cell membrane",
+  "Fluid Mosaic Model" : "refers to the changing pattern of proteins on lipid bilayer",
+  "iceberg" : "a protein in the membrane is like an ______ on water",
+  "50x" : "how many more lipid molecules than protein molecules",
+  "50%" : "how much of membrane's mass is made up of protein",
+  "channel" : "membrane protein that allows for passage of small water-soluble molecules",
+  "carrier molecule" : "membrane protein that transfers specific substances",
+  "docking-marker acceptor" : "membrane protein involved with secretory vesicles & exocytosis",
+  "membrane-bound enzyme" : "membrane protein that helps facilitate chemical reactions",
+  "receptor" : "membrane protein that recognizes & decodes extracellular signals",
+  "cell adhesion molecule" : "membrane protein that establishes direct adhesion between cells",
+  "CAM" : "cell adhesion molecule",
+  "peripheral" : "membrane protein that adheres only temporarily to the biological membrane with which they are associated"
 }

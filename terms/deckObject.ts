@@ -1,4 +1,4 @@
-import { cellTerms, cellularRespiration } from "./cellTerms";
+import { cellTerms, cellularRespiration, membraneTerms } from "./cellTerms";
 import { ListObject, mnemonics } from "./mnemonics";
 
 export type TermObject = {
@@ -42,6 +42,14 @@ export const deckObject: DeckObject = {
     unitName: "Cellular Respiration",
     deckType: "tri",
     data: cellularRespiration
+  },
+  "1.3" : {
+    group: "Module 1",
+    chapter: "Cells",
+    unitCode: "membrane",
+    unitName: "Cellular Membrane",
+    deckType: "tri",
+    data: membraneTerms
   },
   "mnem" : {
     group: "extras",
