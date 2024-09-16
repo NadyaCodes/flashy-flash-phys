@@ -53,7 +53,7 @@ const TriGameComponent: React.FC<TriGameComponentProps> = ({
 
   return (
     <div>
-      <div className="grid grid-cols-3 gap-4 pb-20">
+      <div className="grid grid-cols-3 gap-4 pb-40">
         <div>
           <button
             onClick={() => toggleVisibility("match")}

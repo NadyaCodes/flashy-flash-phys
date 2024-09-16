@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import type { Deck } from "terms/deckObject";
 import { findRandomArrayIndex } from "../../helpers/findRandomIndex";
 
@@ -24,6 +24,8 @@ const VocabFlashDisplay: React.FC<VocabFlashDisplayProps> = ({
   const [guessedTerm, setGuessedTerm] = useState<string>("");
   const [returnCard, setReturnCard] = useState<boolean>(false);
   const [done, setDone] = useState<boolean>(false);
+  const [showHint, setShowHint] = useState<boolean>(false);
+  const [listLength, setListLength] = useState<number>(termList.length);
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setGuessedTerm(event.target.value);
@@ -51,6 +53,7 @@ const VocabFlashDisplay: React.FC<VocabFlashDisplayProps> = ({
       setGuessedTerm("");
       setCurrentCard(newIndex);
       setTermList(newTermList);
+      setShowHint(false);
     } else {
       setDone(true);
       setGuessedTerm("");
@@ -64,8 +67,15 @@ const VocabFlashDisplay: React.FC<VocabFlashDisplayProps> = ({
     ? "Invalid Data Format"
     : currentData ?? "No Data";
 
+  useEffect(() => {
+    setListLength(termList.length);
+  }, [termList]);
+
   return (
     <div className="flex flex-col">
+      <div className="pb-2 text-green-400">
+        {listLength} / {termArray.length}
+      </div>
       {done && termList.length > 0 && currentCard !== undefined
         ? "All Done!!"
         : `Guessing: ${displayData}`}
@@ -82,6 +92,13 @@ const VocabFlashDisplay: React.FC<VocabFlashDisplayProps> = ({
       >
         Check
       </button>
+      <button
+        onClick={() => setShowHint(!showHint)}
+        className="mt-2 rounded bg-green-400 p-2 text-green-900"
+      >
+        Hint
+      </button>
+      {showHint ? <div>{term}</div> : <div></div>}
     </div>
   );
 };
