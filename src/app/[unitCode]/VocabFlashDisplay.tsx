@@ -98,7 +98,13 @@ const VocabFlashDisplay: React.FC<VocabFlashDisplayProps> = ({
       >
         Hint
       </button>
-      {showHint ? <div>{term}</div> : <div></div>}
+      {showHint ? (
+        <div className="rounded-bl rounded-br bg-green-200 p-2 text-green-900">
+          {term}
+        </div>
+      ) : (
+        <div></div>
+      )}
     </div>
   );
 };
