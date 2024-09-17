@@ -45,9 +45,17 @@ export const deckObject: DeckObject = {
   },
   "1.3" : {
     group: "Module 1",
-    chapter: "Cells",
+    chapter: "Membranes",
     unitCode: "membrane",
     unitName: "Cellular Membrane",
+    deckType: "tri",
+    data: membraneTerms
+  },
+  "1.4" : {
+    group: "Module 1",
+    chapter: "Membranes",
+    unitCode: "unassisted-transport",
+    unitName: "Membrane Transport",
     deckType: "tri",
     data: membraneTerms
   },
