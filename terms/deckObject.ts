@@ -1,4 +1,4 @@
-import { cellTerms, cellularRespiration, membraneTerms, passiveMembraneTransport } from "./cellTerms";
+import { activeTransport, cellTerms, cellularRespiration, membraneTerms, passiveMembraneTransport, passiveMembraneTransport2 } from "./cellTerms";
 import { ListObject, mnemonics } from "./mnemonics";
 
 export type TermObject = {
@@ -58,6 +58,22 @@ export const deckObject: DeckObject = {
     unitName: "Membrane Transport",
     deckType: "tri",
     data: passiveMembraneTransport
+  },
+  "1.5" : {
+    group: "Module 1",
+    chapter: "Membranes",
+    unitCode: "unassisted-transport-2",
+    unitName: "Membrane Transport 2",
+    deckType: "tri",
+    data: passiveMembraneTransport2
+  },
+  "1.6" : {
+    group: "Module 1",
+    chapter: "Membranes",
+    unitCode: "active-transport",
+    unitName: "Active Transport",
+    deckType: "tri",
+    data: activeTransport
   },
   "mnem" : {
     group: "extras",
