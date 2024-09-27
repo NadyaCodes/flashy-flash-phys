@@ -1,3 +1,4 @@
+import { blood1 } from "./bloodTerms";
 import { activeTransport, cellTerms, cellularRespiration, membraneTerms, passiveMembraneTransport, passiveMembraneTransport2 } from "./cellTerms";
 import { ListObject, mnemonics } from "./mnemonics";
 
@@ -74,6 +75,14 @@ export const deckObject: DeckObject = {
     unitName: "Active Transport",
     deckType: "tri",
     data: activeTransport
+  },
+  "2.1" : {
+    group: "Module 2",
+    chapter: "Blood",
+    unitCode: "blood1",
+    unitName: "Intro to Blood",
+    deckType: "tri",
+    data: blood1
   },
   "mnem" : {
     group: "extras",
